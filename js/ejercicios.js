@@ -134,3 +134,42 @@ function conversor (){
 }
 let enviar=document.getElementById('enviar').addEventListener('click',conversor);
 
+
+//TRIANGULO
+function triangulo(){
+    let lado1=document.getElementById('lado1').value;
+    let lado2=document.getElementById('lado2').value;
+    let lado3=document.getElementById('lado3').value;
+
+    if(lado1 == lado2 & lado2 == lado3){
+        //Inicia Alerta
+        Swal.fire({
+            title: `Triangulo Equilatero`,
+            position: 'top',
+            footer: 'Todos sus lados son Iguales'
+        })
+        //Finaliza Alerta
+
+    }else if(lado1 == lado2 || lado1 == lado3 || lado2 == lado3){
+        
+        //Inicia Alerta
+        Swal.fire({
+            title: `Triangulo Isoceles`,
+            position: 'top',
+            footer: 'Dos lados son Iguales'
+        })
+        //Finaliza Alerta
+
+    }else{
+        //Inicia Alerta
+        Swal.fire({
+            title: `Triangulo Escaleno`,
+            position: 'top',
+            footer: 'Todos sus lados son Diferentes'
+        })
+        //Finaliza Alerta
+    }
+
+}
+let calcular=document.getElementById('calcular').addEventListener('click',triangulo);
+

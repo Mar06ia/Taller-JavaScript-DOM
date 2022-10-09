@@ -56,4 +56,81 @@ let minuscula=document.getElementById('minuscula').addEventListener('click',func
 let longitud=document.getElementById('longitud').addEventListener('click',function fun(){letras("longitud")});
 let caracter=document.getElementById('caracter').addEventListener('click',function fun(){letras("caracter")});
 
+//TEMPERATURA
+function conversor (){
+    let opcion=document.getElementById('opcion').value;
+    let opcion2=document.getElementById('opcion2').value;
+    let temperatura=parseFloat(document.getElementById('temperatura').value);
+    
+    if(opcion=="fahrenheit" && opcion2=="celsius"){
+        rta=(temperatura-32)*5/9;
+        //Inicia Alerta
+        Swal.fire({
+            title: `Su temperatura en Celsius es: <br>${rta}`,
+            position: 'top',
+            confirmButtonText: 'Ok'
+        })
+        //Finaliza Alerta
+
+    }else if(opcion=="fahrenheit" && opcion2=="kelvin"){
+        rta=((temperatura-32)*5/9)+273.15;
+        //Inicia Alerta
+        Swal.fire({
+            title: `Su temperatura en Kelvin es: <br>${rta}`,
+            position: 'top',
+            confirmButtonText: 'Ok'
+        })
+        //Finaliza Alerta
+
+    }else if(opcion=="celsius" && opcion2=="fahrenheit"){
+        rta=(temperatura*9/5)+32;
+        //Inicia Alerta
+        Swal.fire({
+            title: `Su temperatura en Fahrenheit es: <br>${rta}`,
+            position: 'top',
+            confirmButtonText: 'Ok'
+        })
+        //Finaliza Alerta
+
+    }else if(opcion=="celsius" && opcion2=="kelvin"){
+        rta=(temperatura+273.15);
+        //Inicia Alerta
+        Swal.fire({
+            title: `Su temperatura en Kelvin es: <br>${rta}`,
+            position: 'top',
+            confirmButtonText: 'Ok'
+        })
+        //Finaliza Alerta
+
+    }else if(opcion=="kelvin" && opcion2=="celsius"){
+        rta=(temperatura-273.15);
+        //Inicia Alerta
+        Swal.fire({
+            title: `Su temperatura en Celsius es: <br>${rta}`,
+            position: 'top',
+            confirmButtonText: 'Ok'
+        })
+        //Finaliza Alerta
+
+    }else if(opcion=="kelvin" && opcion2=="fahrenheit"){
+        rta=((temperatura-273.15)*9/5)+32;
+        //Inicia Alerta
+        Swal.fire({
+            title: `Su temperatura en Fahrenheit es: <br>${rta}`,
+            position: 'top',
+            confirmButtonText: 'Ok'
+        })
+        //Finaliza Alerta
+
+    }else{
+        //Inicia Alerta
+        Swal.fire({
+            icon: 'warning',
+            title: `¡Las temperaturas no pueden ser iguales!`,
+            position: 'top',
+        })
+        //Finaliza Alerta
+    }
+}
+let enviar=document.getElementById('enviar').addEventListener('click',conversor);
 

@@ -173,3 +173,89 @@ function triangulo(){
 }
 let calcular=document.getElementById('calcular').addEventListener('click',triangulo);
 
+
+//INSTRUCTORES
+function comprobar(){
+    let nombre=document.getElementById('nombre').value;
+    let apellido=document.getElementById('apellido').value;
+    let competencia=document.getElementById('competencia').value;
+
+    if(nombre=="Tatiana"  && apellido=="Cabrera" && competencia=="Front-end" ||nombre=="Tatiana"  && apellido=="Cabrera" && competencia=="Calidad" ){
+        //Inicia Alerta
+        Swal.fire({
+            icon: 'success',
+            title: `Respuesta Correcta`,
+            position: 'top',
+        })
+        //Finaliza Alerta
+
+    }else if(nombre=="Carolina"  && apellido=="Forero" && competencia=="Seguimiento"){
+        //Inicia Alerta
+        Swal.fire({
+            icon: 'success',
+            title: `Respuesta Correcta`,
+            position: 'top',
+        })
+        //Finaliza Alerta
+
+    }else if(nombre=="Adriana"  && apellido=="Duarte" && competencia=="Diseño"){
+        //Inicia Alerta
+        Swal.fire({
+            icon: 'success',
+            title: `Respuesta Correcta`,
+            position: 'top',
+        })
+        //Finaliza Alerta
+
+    }else if(nombre=="Yaneth"  && apellido=="Castillo" && competencia=="Ambiental"){
+        //Inicia Alerta
+        Swal.fire({
+            icon: 'success',
+            title: `Respuesta Correcta`,
+            position: 'top',
+        })
+        //Finaliza Alerta
+
+    }else if(nombre=="Jhonatan"  && apellido=="Espitia" && competencia=="Php"){
+        //Inicia Alerta
+        Swal.fire({
+            icon: 'success',
+            title: `Respuesta Correcta`,
+            position: 'top',
+        })
+        //Finaliza Alerta
+
+
+    }else if(nombre=="Luis"  && apellido=="Baquero" && competencia=="Cultura Fisica"){
+        //Inicia Alerta
+        Swal.fire({
+            icon: 'success',
+            title: `Respuesta Correcta`,
+            position: 'top',
+        })
+        //Finaliza Alerta
+
+    }else if(nombre=="Fernando"  && apellido=="Galindo" && competencia=="Base de Datos"){
+        //Inicia Alerta
+        Swal.fire({
+            icon: 'success',
+            title: `Respuesta Correcta`,
+            position: 'top',
+        })
+        //Finaliza Alerta
+
+    }else{
+        //Inicia Alerta
+        Swal.fire({
+            icon: 'error',
+            title: `Respuesta Incorrecta`,
+            position: 'top',
+        })
+        //Finaliza Alerta
+    }
+
+}
+let seleccionar=document.getElementById('seleccionar').addEventListener('click',comprobar);
+
+
+

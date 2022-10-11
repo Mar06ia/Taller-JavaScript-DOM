@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="formulario.css">
+    <title>Validacion</title>
+  </head>
+  <body>
+    <h1>Registro de Usuario</h1>
+    <form action="" class="formulario" id="formulario">
+
+
+      <!-- Grupo: TIPO DOCUMENTO -->
+      <div class="formulario__grupo" id="grupo__tipodoc">
+        <label for="tipodoc" class="formulario__label">Tipo de Documento </label>
+
+        <select class="formulario__grupo-select" required>
+          <div class="formulario__grupo-input" name="tipodoc" id="tipodoc">
+            <option class="formulario_option" selected>No aplica</option>
+            <option class="formulario_option" value="Front-end">CC</option> 
+            <option class="formulario_option" value="Calidad">TI</option>            
+            <option class="formulario_option" value="Seguimiento">CE</option>
+          </div>
+          <p class="formulario__input-error">
+            El Tipo de documento no puede estar vacio
+          </p>        
+        </select>
+      </div>
+
+      <!-- Grupo: Nº DOCUMENTO -->
+      <div class="formulario__grupo" id="grupo__documento">
+        <label for="documento" class="formulario__label">Nº Documento</label>
+
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="documento" id="documento" placeholder="#" minlength="5" maxlength="15"/>
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          El Numero de Documento tiene  un minimo de 5 y un maximo de 15 caracteres.
+        </p>
+      </div>
+
+
+      <!-- Grupo: NOMBRE -->
+      <div class="formulario__grupo" id="grupo__nombre">
+        <label for="nombre" class="formulario__label">Nombre</label>
+
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Karina" minlength="1" maxlength="40"/>
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          El Nombre tiene que ser de 1 a 40 dígitos y solo puede contener letras y guion bajo.
+        </p>
+      </div>
+
+
+      <!-- Grupo: APELLIDO -->
+      <div class="formulario__grupo" id="grupo__apellido">
+        <label for="apellido" class="formulario__label">Apellido</label>
+
+        <div class="formulario__grupo-input">
+          <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="Hernandez" minlength="1" maxlength="40"/>
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          El Apellido tiene que ser de 1 a 40 dígitos y solo puede contener numeros, letras y guion bajo.
+        </p>
+      </div>
+
+      <!-- Grupo: FECHA NACIMIENTO -->
+      <div class="formulario__grupo" id="grupo__fechanac">
+        <label for="fechanac" class="formulario__label">Fecha Nacimiento</label>
+
+        <div class="formulario__grupo-input" id="" required>
+          <input type="date" class="formulario__input" name="fechanac" id="fechanac"/>
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          La fecha de nacimiento no puede estar vacia
+        </p>
+      </div>
+
+      <!-- Grupo: CORREO ELECTRONICO -->
+      <div class="formulario__grupo" id="grupo__correo">
+        <label for="correo" class="formulario__label">Correo Electrónico</label>
+        <div class="formulario__grupo-input">
+          <input type="email" class="formulario__input" name="correo" id="correo" placeholder="user@gmail.com"/>
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.
+        </p>
+      </div>
+
+      <!-- Grupo: CONTRASEÑA -->
+      <div class="formulario__grupo" id="grupo__password">
+        <label for="password" class="formulario__label">Contraseña</label>
+
+        <div class="formulario__grupo-input">
+          <input type="password" class="formulario__input" name="password" id="password"/>
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          La contraseña tiene que ser de 4 a 12 dígitos.
+        </p>
+      </div>
+
+      <!-- Grupo: CONTRASEÑA 2 -->
+      <div class="formulario__grupo" id="grupo__password2">
+        <label for="password2" class="formulario__label">Repetir Contraseña</label>
+
+        <div class="formulario__grupo-input">
+          <input type="password" class="formulario__input" name="password2" id="password2"/>
+          <i class="formulario__validacion-estado fas fa-times-circle"></i>
+        </div>
+        <p class="formulario__input-error">
+          Ambas contraseñas deben ser iguales.
+        </p>
+      </div>
+
+
+
+      <!-- Grupo: TERMINOS Y CONDICIONES -->
+      <div class="formulario__grupo" id="grupo__terminos">
+        <label class="formulario__label">
+          <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos"/>
+          Acepto los Terminos y Condiciones
+        </label>
+      </div>
+
+      <div class="formulario__mensaje" id="formulario__mensaje">
+        <p>
+          <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor diligencia el formulario correctamente.
+        </p>
+      </div>
+
+      <div class="formulario__grupo formulario__grupo-btn-enviar">
+        <button type="submit" class="formulario__btn">Enviar</button>
+        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+          Formulario enviado exitosamente!
+        </p>
+      </div>
+    </form>
+    <script src="formulario.js"></script>
+  </body>
+</html>

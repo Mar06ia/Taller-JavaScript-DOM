@@ -22,19 +22,137 @@
                 <img src="./img/circulo.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Circulo</h5>
-                  <button type="button" id="area-circulo"  class="btn btn-primary">Area</button>
-                  <button type="button" id="perimetro-circulo" class="btn btn-success">Perimetro</button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#circuloModal">Area</button>
+
+                  <!--MODAL AREA  CIRCULO-->
+                  <div class="modal" id="circuloModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Calcular Area del Circulo</h3>
+                          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="" id="formularioAC">
+              
+                              <input type="text"  class="form-control" id="inputAreaCirculo"  placeholder="Ingrese el valor del radio">
+                              <hr>
+                              <h4>Resultado</h4>
+                              <p id="resultadoAreaCirculo"></p>
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="submit" class="btn btn-success" id="btn-circulo">Calcular</button>
+                          </form>
+              
+                      </div>
+                        <div class="modal-footer">
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--FINALIZA MODAL AREA CIRCULO-->
+              
+                  <button type="button" id="perimetro-circulo"  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perimetroModal">Perimetro</button>
+                  <!--MODAL PERIMETRO  CIRCULO-->
+                  <div class="modal" id="perimetroModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Calcular Perimetro del Circulo</h3>
+                          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="" id="formularioPC">
+              
+                              <input type="text"  class="form-control" id="inputPC"  placeholder="Ingrese el valor del radio">
+                              <hr>
+                              <h4>Resultado</h4>
+                              <p id="resultadoPC"></p>
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="submit" class="btn btn-success" id="btn-circulop" >Calcular</button>
+                          </form>
+              
+                      </div>
+                        <div class="modal-footer">
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--FINALIZA MODAL PERIMETRO CIRCULO-->
+
+
+
+                 
+
                 </div>
             </div>
         </div>
+
       <!--CUADRADO-->
         <div class="col-3">
             <div class="card" style="width: 18rem;">
                 <img src="./img/cuadrado.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Cuadrado</h5>
-                  <button type="button" id="area-cuadrado"  class="btn btn-primary">Area</button>
-                  <button type="button" id="perimetro-cuadrado" class="btn btn-success">Perimetro</button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cuadradoModal">Area</button>
+
+                  <!--MODAL AREA  CUADRADO-->
+                  <div class="modal" id="cuadradoModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Calcular Area del Cuadrado</h3>
+                          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="" id="formularioACu">
+              
+                              <input type="text"  class="form-control" id="inputAreaCuadrado"  placeholder="Ingrese el valor del lado">
+                              <hr>
+                              <h4>Resultado</h4>
+                              <p id="resultadoAreaCuadrado"></p>
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="submit" class="btn btn-success" >Calcular</button>
+                          </form>
+              
+                      </div>
+                        <div class="modal-footer">
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--FINALIZA MODAL PERIMETRO CUADRADO-->
+                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perimetroCuModal">Perimetro</button>
+                  <div class="modal" id="perimetroCuModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Calcular Perimetro del Cuadrado</h3>
+                          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="" id="formularioPCu">
+              
+                              <input type="text"  class="form-control" id="inputPCu"  placeholder="Ingrese el lado del cuadrado">
+                              <hr>
+                              <h4>Resultado</h4>
+                              <p id="resultadoPCu"></p>
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="submit" class="btn btn-success">Calcular</button>
+                          </form>
+              
+                      </div>
+                        <div class="modal-footer">
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--FINALIZA MODAL PERIMETRO CUADRADO-->
+
+
                 </div>
               </div>
         </div>
@@ -44,8 +162,68 @@
                 <img src="./img/rectangulo.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Rectangulo</h5>
-                  <button type="button" id="area-rectangulo"  class="btn btn-primary">Area</button>
-                  <button type="button" id="perimetro-rectangulo" class="btn btn-success">Perimetro</button>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#rectanguloModal">Area</button>
+
+                  <!--MODAL AREA  RECTANGULO-->
+                  <div class="modal" id="rectanguloModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Calcular Area del Rectangulo</h3>
+                          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="" id="formularioARec">
+              
+                              <input type="text"  class="form-control" id="inputARectangulo1"  placeholder="Ingrese el valor del 1 lado">
+                              <input type="text"  class="form-control" id="inputARectangulo2"  placeholder="Ingrese el valor del 2 lado">
+                              <hr>
+                              <h4>Resultado</h4>
+                              <p id="resultadoARec"></p>
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="submit" class="btn btn-success" >Calcular</button>
+                          </form>
+              
+                      </div>
+                        <div class="modal-footer">
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--FINALIZA MODAL AREA RECTANGULO-->
+
+                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perimetroRecModal">Perimetro</button>
+                  <!--FINALIZA MODAL PERIMETRO RECTANGULO-->
+                  <div class="modal" id="perimetroRecModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Calcular Perimetro del Rectangulo</h3>
+                          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="" id="formularioPRec">
+              
+                              <input type="text"  class="form-control" id="inputPRectangulo1"  placeholder="Ingrese el valor del 1 lado">
+                              <input type="text"  class="form-control" id="inputPRectangulo2"  placeholder="Ingrese el valor del 2 lado">
+                              <hr>
+                              <h4>Resultado</h4>
+                              <p id="resultadoPRec"></p>
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="submit" class="btn btn-success" >Calcular</button>
+                          </form>
+              
+                      </div>
+                        <div class="modal-footer">
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--FINALIZA MODAL PERIMETRO RECTANGULO-->
+
+
                 </div>
               </div>
         </div>
@@ -55,8 +233,70 @@
                 <img src="./img/triangulo.png" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Triangulo</h5>
-                  <button type="button" id="area-triangulo"  class="btn btn-primary">Area</button>
-                  <button type="button" id="perimetro-triangulo" class="btn btn-success">Perimetro</button>
+
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#trianguloModal">Area</button>
+                  <!--MODAL AREA  TRIANGULO-->
+                  <div class="modal" id="trianguloModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Calcular Area del Triangulo</h3>
+                          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="" id="formularioATri">
+              
+                              <input type="text"  class="form-control" id="inputATriangulo1"  placeholder="Ingrese la base">
+                              <input type="text"  class="form-control" id="inputATriangulo2"  placeholder="Ingrese la altura">
+                              <hr>
+                              <h4>Resultado</h4>
+                              <p id="resultadoATri"></p>
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="submit" class="btn btn-success" >Calcular</button>
+                          </form>
+              
+                      </div>
+                        <div class="modal-footer">
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--FINALIZA MODAL AREA TRIANGULO-->
+
+                  
+                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#perimetroTriModal">Perimetro</button>
+                  <!--FINALIZA MODAL PERIMETRO TRIANGULO-->
+                  <div class="modal" id="perimetroTriModal">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h3 class="modal-title">Calcular Perimetro del Triangulo</h3>
+                          <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form action="" id="formularioPTri">
+              
+                              <input type="text"  class="form-control" id="inputPTriangulo1"  placeholder="Ingrese la base del Triangulo ">
+                              <input type="text"  class="form-control" id="inputPTriangulo2"  placeholder="Ingrese la altura del lado 2 ">
+                              <input type="text"  class="form-control" id="inputPTriangulo3"  placeholder="Ingrese la altura del lado 3 ">
+                              <hr>
+                              <h4>Resultado</h4>
+                              <p id="resultadoPTri"></p>
+                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="submit" class="btn btn-success" >Calcular</button>
+                          </form>
+              
+                      </div>
+                        <div class="modal-footer">
+              
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--FINALIZA MODAL PERIMETRO TRIANGULO-->
+
+
                 </div>
               </div>
         </div>

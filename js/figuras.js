@@ -1,111 +1,118 @@
-/*-----------------------------CIRCULO---------------------*/
-const areaCirculo = document.getElementById('area-circulo');
-const perimetroCirculo = document.getElementById('perimetro-circulo');
+/*-----------------------------AREA CIRCULO---------------------*/
+const formulario = document.getElementById('formularioAC');
+const radio = document.getElementById('inputAreaCirculo');
+const resultado = document.getElementById('resultadoAreaCirculo');
 
-areaCirculo.addEventListener("click",()=>{
-    //alert('funciona:)');
-    let radio=parseInt
-        (prompt("Ingrese el valor del radio"));
+formulario.addEventListener('submit',(evento)=>{
+    evento.preventDefault();
     //math: Metodo Funciones Matematicas
-    let areac=Math.PI*(radio*radio);
-    Swal.fire({
-        title: `El area del Circulo es: <br> ${areac}`,
-        position: 'top'
-    })
-
-    //alert(`El area del Circulo es :${areac}`);
+    let area = Math.PI*(parseInt(radio.value)*parseInt(radio.value));
+    // innerHtml: Permite modificar el valor del elemento html
+    resultado.innerHTML = area;
 });
 
-perimetroCirculo.addEventListener("click",()=>{
-    //alert('funciona:)');
-    let radio=parseInt(prompt("Ingrese el valor del radio"));
-    let perimetroc=2*Math.PI*radio;
-    Swal.fire({
-        title: `El Perimetro del Circulo es:<br>${perimetroc}`,
-        position: 'top'
-    })
-})
+/*-----------------------------PERÍMETRO CIRCULO---------------------*/
+const formularioPC = document.getElementById('formularioPC');
+const radioPC = document.getElementById('inputPC');
+const resultadoPC = document.getElementById('resultadoPC');
 
-
-/*----------------------------CUADRADO----------------------*/
-const areaCuadrado = document.getElementById('area-cuadrado');
-const perimetroCuadrado = document.getElementById('perimetro-cuadrado');
-
-areaCuadrado.addEventListener("click",()=>{
-    //alert('funciona:)');
-    let lado=parseInt(prompt("Ingrese el lado"));
-    //math: Metodo Funciones Matematicas
-    let areacu=lado*lado;
-    Swal.fire({
-        title: `El area del Cuadrado es :<br>${areacu}`,
-        position: 'top'
-    })
+formularioPC.addEventListener('submit',(evento)=>{
+    evento.preventDefault();
+    //typeof: nos dice el tipo de dato.
+    //alert(typeof(radio));
+    let perimetroc =2*Math.PI*(parseInt(radioPC.value)*parseInt(radioPC.value));
+    // innerHtml: Permite modificar el valor del elemento html
+    resultadoPC.innerHTML = perimetroc;
 });
 
-perimetroCuadrado.addEventListener("click",()=>{
-    //alert('funciona:)');
-    let lado=parseInt(prompt("Ingrese el valor del lado"));
-    let perimetrocu=lado*4;
-    Swal.fire({
-        title: `El Perimetro del Cuadrado es :<br>${perimetrocu}`,
-        position: 'top'
-    })
-})
 
-/*-------------------------RECTANGULO-----------------------*/
-const areaRectangulo = document.getElementById('area-rectangulo');
-const perimetroRectangulo = document.getElementById('perimetro-rectangulo');
+/*----------------------------AREA CUADRADO----------------------*/
+const formularioAcu = document.getElementById('formularioACu');
+const lado = document.getElementById('inputAreaCuadrado');
+const resultadoAcu = document.getElementById('resultadoAreaCuadrado');
 
-areaRectangulo.addEventListener("click",()=>{
-    //alert('funciona:)');
-    let base=parseInt(prompt("Ingrese el valor del primer lado"));
-    let altura=parseInt(prompt("Ingrese el valor del segundo lado"));
+formularioAcu.addEventListener('submit',(evento)=>{
+    evento.preventDefault();
     //math: Metodo Funciones Matematicas
-    let arearec=base*altura;
-    Swal.fire({
-        title: `El area del Rectangulo es :<br>${arearec}`,
-        position: 'top'
-    })
+    let areacu =parseInt((lado.value)*(lado.value));
+    // innerHtml: Permite modificar el valor del elemento html
+    resultadoAcu.innerHTML = areacu;
 });
 
-perimetroRectangulo.addEventListener("click",()=>{
-    //alert('funciona:)');
-    let base=parseInt(prompt("Ingrese el valor del primer lado"));
-    let altura=parseInt(prompt("Ingrese el valor del segundo lado"));
+/*-----------------------------PERÍMETRO CUADRADO---------------------*/
+const formularioPCu =document.getElementById('formularioPCu');
+const ladoP = document.getElementById('inputPCu');
+const resultadoPcu = document.getElementById('resultadoPCu');
+
+formularioPCu.addEventListener('submit',(evento)=>{
+    evento.preventDefault();
+    //math: Metodo Funciones Matematicas
+    let perimetrocu =lado*4;
+    // innerHtml: Permite modificar el valor del elemento html
+    resultadoPcu.innerHTML = perimetrocu;
+});
+
+
+/*-------------------------AREA RECTANGULO-----------------------*/
+const formularioARec = document.getElementById('formularioARec');
+const base = document.getElementById('inputARectangulo1');
+const altura = document.getElementById('inputARectangulo2');
+const resultadoARec = document.getElementById('resultadoARec');
+
+formularioARec.addEventListener('submit',(evento)=>{
+    evento.preventDefault();
+    //math: Metodo Funciones Matematicas
+    let arearectangulo=parseInt((base.value)*(altura.value));
+    // innerHtml: Permite modificar el valor del elemento html
+    resultadoARec.innerHTML = arearectangulo;
+});
+
+
+/*--------------------PERIMETRO RECTANGULO-----------------------*/
+const formularioPRec = document.getElementById('formularioPRec');
+const baseP2 =document.getElementById('inputPRectangulo1');
+const alturaP2 =document.getElementById('inputPRectangulo2');
+const resultadoPRec = document.getElementById('resultadoPRec');
+
+formularioPRec.addEventListener('submit',(evento)=>{
+    evento.preventDefault();
+    //math: Metodo Funciones Matematicas
     let perimetrorec=2*(base+altura);
-    Swal.fire({
-        title: `El Perimetro del Rectangulo es: <br>${perimetrorec}`,
-        position: 'top'
-    })
-})
-
-
-/*--------------------------TRIANGULO------------------------*/
-const areaTriangulo = document.getElementById('area-triangulo');
-const perimetroTriangulo = document.getElementById('perimetro-triangulo');
-
-areaTriangulo.addEventListener("click",()=>{
-    //alert('funciona:)');
-    let base=parseInt(prompt("Ingrese el valor del primer lado"));
-    let altura=parseInt(prompt("Ingrese el valor del segundo lado"));
-    //math: Metodo Funciones Matematicas
-    let areatri=base*altura/2;
-    Swal.fire({
-        title: `El area del Triangulo es :<br>${areatri}`,
-        position: 'top'
-    })
+    //let perimetrorectangulo=2*Math(parseInt((baseP2.value))*(parseInt(alturaP2)));
+    // innerHtml: Permite modificar el valor del elemento html
+    resultadoPRec.innerHTML = perimetrorec;
 });
 
-perimetroTriangulo.addEventListener("click",()=>{
-    //alert('funciona:)');
-    let base=parseInt(prompt("Ingrese el valor de la base"));
-    let altura=parseInt(prompt("Ingrese el valor del segundo lado"));
-    let perimetrotri=(base+altura)*2;
-    console.log(perimetrotri);
-    Swal.fire({
-        title: `El Perimetro del Triangulo es :<br>${perimetrotri}`,
-        position: 'top'
-    })
+/*--------------------------AREA TRIANGULO------------------------*/
+const formularioATri = document.getElementById('formularioATri');
+const baseTri = document.getElementById('inputATriangulo1');
+const alturaTri = document.getElementById('inputATriangulo2');
+const resultadoATri = document.getElementById('resultadoATri');
 
-})
+formularioATri.addEventListener('submit',(evento)=>{
+    evento.preventDefault();
+    //math: Metodo Funciones Matematicas
+    let areatri=parseInt((baseTri.value)*(alturaTri.value)/2);
+    // innerHtml: Permite modificar el valor del elemento html
+    resultadoATri.innerHTML = areatri;
+});
+
+
+/*--------------------------PERIMETRO TRIANGULO------------------------*/
+const formularioPTri =document.getElementById('formularioPTri');
+const basePTri2 =document.getElementById('inputPTriangulo1');
+const alturaPTri2 =document.getElementById('inputPTriangulo2');
+const alturaPTri3 =document.getElementById('inputPTriangulo3');
+const resultadoTri = document.getElementById('resultadoPTri');
+
+formularioPTri.addEventListener('submit',(evento)=>{
+    evento.preventDefault();
+    //math: Metodo Funciones Matematicas
+    //let perimetrotri=parseInt((basePTri2+alturaPTri2+alturaPTri3).value);
+    let perimetrotri=(parseInt((basePTri2.value))+(parseInt(alturaPTri2.value))+(parseInt(alturaPTri3.value)));
+    // innerHtml: Permite modificar el valor del elemento html
+    resultadoPTri.innerHTML = perimetrotri;
+});
+
+
 

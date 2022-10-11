@@ -7,7 +7,7 @@ const expresiones = {
     documento: /^\d{10,15}$/,
     nombre: /^[a-zA-ZÁ-ÿ\s]{1,40}$/,
     apellido: /^[a-zA-ZÁ-ÿ\s]{1,40}$/,
-    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+    correo: /^[a-zA-Z0-9_.+-]+@misena.edu.co/,
     password: /^.{4,12}$/,
     //telefono: /^\d{7,14}$/
 }
@@ -114,7 +114,7 @@ formulario.addEventListener('submit',(evento) => {
     // TERMINOS Y CONDICIONES
     const terminos = document.getElementById('terminos');
 
-    if (campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked) {
+    if (campos.documento && campos.nombre && campos.apellido && campos.correo && campos.password  && terminos.checked) {
         formulario.reset();
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
         document.querySelectorAll('formulario__grupo-correcto').forEach((icono)=>{

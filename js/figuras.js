@@ -47,7 +47,7 @@ const resultadoPcu = document.getElementById('resultadoPCu');
 formularioPCu.addEventListener('submit',(evento)=>{
     evento.preventDefault();
     //math: Metodo Funciones Matematicas
-    let perimetrocu =lado*4;
+    let perimetrocu =parseInt(ladoP.value*4);
     // innerHtml: Permite modificar el valor del elemento html
     resultadoPcu.innerHTML = perimetrocu;
 });
@@ -77,7 +77,7 @@ const resultadoPRec = document.getElementById('resultadoPRec');
 formularioPRec.addEventListener('submit',(evento)=>{
     evento.preventDefault();
     //math: Metodo Funciones Matematicas
-    let perimetrorec=2*(base+altura);
+    let perimetrorec=parseInt((2*(baseP2.value))+(alturaP2.value));
     //let perimetrorectangulo=2*Math(parseInt((baseP2.value))*(parseInt(alturaP2)));
     // innerHtml: Permite modificar el valor del elemento html
     resultadoPRec.innerHTML = perimetrorec;

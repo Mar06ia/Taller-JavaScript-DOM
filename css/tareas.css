@@ -1,0 +1,31 @@
+:root{
+    --green: #20c997;
+    --orange: #fd7e14;
+    --cyan: #0dcaf0;
+    --dark: #000;
+    --black: #fff; 
+}
+
+.task{
+    background-color: var(--cyan);
+    padding: 0.5rem;
+    margin: 1rem 2rem;
+    border-radius: 5px;
+}
+
+.done{
+    background-color: var(--green);
+    text-decoration: line-through;
+}
+
+.doit{
+    background-color: var(--orange);
+}
+
+.autor{
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-self: center;
+}
